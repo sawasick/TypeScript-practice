@@ -27,3 +27,33 @@ direction = '東'; //ok
 
 //組み合わせも可能
 let currentYear: number | '令和';
+
+//booleanリテラル
+const flag: boolean = true;
+
+//boolean→string
+console.log(String(flag));
+console.log(flag.toString());
+
+//boolean→number
+console.log(Number(flag)); //true:1, false:0
+
+//booleanリテラル
+const flag: boolean = true;
+
+//数値型(number)
+const age: number = 21;
+
+//数値型(bigint)→targetがES2020未満は使えない
+const hugenum: bigint = 9000n;
+
+//stringリテラル
+const str: string = 'hello';
+
+//null(意図してnullを代入する場合など)
+const favoriteFood: string | null = null;
+
+//変数名の最後に?を付ければ、引数が省略可能になる
+function print(name: string, age?: number) {
+	console.log(`name: ${name}, age: ${age || 'empty'}`);
+}
